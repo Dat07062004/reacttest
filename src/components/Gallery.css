@@ -1,0 +1,240 @@
+.gallery {
+  padding: 6rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.gallery-title {
+  font-size: 3rem;
+  color: var(--gothic-gold);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.title-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title-ornament span {
+  color: var(--gothic-red);
+  font-size: 1.5rem;
+}
+
+.ornament-line {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gothic-gold), transparent);
+}
+
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: var(--gothic-silver);
+  border: 2px solid var(--gothic-gray);
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.filter-btn:hover {
+  border-color: var(--gothic-gold);
+  color: var(--gothic-gold);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--gothic-red), var(--gothic-purple));
+  border-color: var(--gothic-gold);
+  color: var(--gothic-gold);
+  box-shadow: 0 5px 20px rgba(139, 0, 0, 0.4);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.artwork-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.artwork-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-frame {
+  background: var(--gothic-dark);
+  border: 2px solid var(--gothic-gray);
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artwork-card:hover .card-frame {
+  border-color: var(--gothic-gold);
+  box-shadow: 
+    0 10px 40px rgba(139, 0, 0, 0.4),
+    inset 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.card-image {
+  aspect-ratio: 4/5;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--gothic-gray);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, var(--gothic-gray) 0%, var(--gothic-dark) 100%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(212, 175, 55, 0.05) 10px,
+      rgba(212, 175, 55, 0.05) 20px
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.artwork-card:hover .image-placeholder {
+  background: 
+    linear-gradient(135deg, rgba(139, 0, 0, 0.3) 0%, rgba(74, 21, 75, 0.3) 100%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(212, 175, 55, 0.1) 10px,
+      rgba(212, 175, 55, 0.1) 20px
+    );
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  opacity: 0.3;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.artwork-title {
+  font-size: 1.5rem;
+  color: var(--gothic-gold);
+  margin-bottom: 0.5rem;
+}
+
+.artwork-artist {
+  font-size: 1.1rem;
+  color: var(--gothic-silver);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.artwork-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gothic-gray);
+}
+
+.artwork-year,
+.artwork-category {
+  font-size: 0.9rem;
+  color: var(--gothic-silver);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+.card-corners {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gothic-gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artwork-card:hover .corner {
+  opacity: 0.6;
+}
+
+.corner.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner.top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 3rem 2rem;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

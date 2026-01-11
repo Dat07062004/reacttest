@@ -1,0 +1,120 @@
+.footer {
+  background: var(--gothic-dark);
+  border-top: 2px solid var(--gothic-gold);
+  padding: 4rem 4rem 2rem;
+  margin-top: 6rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.footer-section h3 {
+  color: var(--gothic-gold);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.footer-section h4 {
+  color: var(--gothic-gold);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.footer-section p {
+  color: var(--gothic-silver);
+  line-height: 1.8;
+  margin: 0.5rem 0;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin: 0.8rem 0;
+}
+
+.footer-section ul li a {
+  color: var(--gothic-silver);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-section ul li a:hover {
+  color: var(--gothic-gold);
+  transform: translateX(5px);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  color: var(--gothic-gold);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-link:hover {
+  color: var(--gothic-red);
+  transform: scale(1.2) rotate(15deg);
+}
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0 2rem;
+}
+
+.divider-ornament {
+  color: var(--gothic-red);
+  font-size: 1.5rem;
+}
+
+.divider-line {
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gothic-gold), transparent);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gothic-gray);
+}
+
+.footer-bottom p {
+  color: var(--gothic-silver);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 2rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .divider-line {
+    width: 50px;
+  }
+}

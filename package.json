@@ -1,0 +1,12 @@
+{
+  "name": "gothic-art-gallery",
+  "version": "1.0.0",
+  "description": "Gothic Art Exhibition Gallery",
+  "private": true,
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

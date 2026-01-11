@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gothic-black: #0a0a0a;
+  --gothic-dark: #1a1a1a;
+  --gothic-gray: #2a2a2a;
+  --gothic-red: #8b0000;
+  --gothic-gold: #d4af37;
+  --gothic-purple: #4a154b;
+  --gothic-silver: #c0c0c0;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: var(--gothic-black);
+  color: var(--gothic-silver);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gothic-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gothic-red);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gothic-gold);
+}
